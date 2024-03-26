@@ -1,0 +1,143 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for Zalance API.",
+	"text": {
+		"plugins": {
+			"zalanceapi": {
+				"name": "Zalance API",
+				"description": "The Zalance API for retrieving products, making purchases, and handling payments.",
+				"help-url": "https://www.zalance.net",
+				"properties": {
+                    "project-id": {
+						"name": "Project Id",
+						"desc": "The Id of your project Zalance."
+					},
+                    "livemode": {
+						"name": "Live Mode",
+						"desc": "Check this mode when you're ready to launch your app. Card networks or payment providers process payments. Othewise, run in test mode to test your app."
+					}
+				},
+				"aceCategories": {
+					"products": "Products"
+				},
+				"conditions": {
+                    "on-prices-received": {
+						"list-name": "On prices received",
+						"display-text": "On prices received",
+						"description": "Callback triggered when get prices has completed."
+					},
+                    "on-buy-click": {
+						"list-name": "On buy click",
+						"display-text": "On buy click",
+						"description": "Triggered when the button is clicked."
+					},
+                    "on-checkout-start": {
+						"list-name": "On checkout start",
+						"display-text": "On checkout start",
+						"description": "Callback triggered when the checkout session has begun and the payment iframe is showing."
+					},
+                    "on-checkout-finish": {
+						"list-name": "On checkout finish",
+						"display-text": "On checkout finish",
+						"description": "Callback triggered when a checkout session has completed."
+					},
+                    "on-error": {
+						"list-name": "On error",
+						"display-text": "On error",
+						"description": "Callback triggered when an error occurs."
+					}
+				},
+				"actions": {
+                    "set-account-id": {
+						"list-name": "Set account Id",
+						"display-text": "Set the player's account Id to [i]{0}[/i]",
+						"description": "Set the player's account Id.",
+						"params": {
+							"accountId": {
+								"name": "Account Id",
+								"desc": "The account Id text."
+							}
+						}
+					},
+                    "get-prices": {
+						"list-name": "Get prices",
+						"display-text": "Get product prices with [i]count: {0}, page: {1}[/i].",
+						"description": "Retrieves items from the public catalog. Up to 50 items can be returned at once. GetItems does not work off a cache of the Catalog and should be used when trying to get recent item updates. However, please note that item references data is cached and may take a few moments for changes to propagate.",
+                        "params": {
+							"count": {
+								"name": "Count",
+								"desc": "Number of items to retrieve. This value is optional. Maximum page size is 50. Default value is 20."
+							},
+                            "page": {
+								"name": "Page",
+								"desc": "The current page to retrieve. This value is optional. Default value is 1."
+							}
+
+						}
+					},
+                    "start-checkout": {
+						"list-name": "Start Checkout",
+						"display-text": "Start a checkout session with a price Id: {0}, quantity: {1}, and automatic tax collection: {2}.",
+						"description": "Begin the checkout session to purchase products. This will spawn a payment window so the customer can complete the transaction in a secured environment.",
+                        "params": {
+                            "price-id": {
+								"name": "Price Id",
+								"desc": "The price Id string."
+							},
+                            "quantity": {
+								"name": "Quantity",
+								"desc": "The quantity of the item to purchase."
+							},
+                            "automatic-tax": {
+								"name": "Automatic Tax",
+								"desc": "Collects tax automatically if set using the business address and tax registrations required to perform the tax calculation associated with the account."
+							}
+						}
+					},
+                    "start-checkout-cart": {
+						"list-name": "Start Checkout Cart",
+						"display-text": "Start a checkout session with a list of line-items: {0} and automatic tax collection: {1}",
+						"description": "Begin the checkout session to purchase products. This will spawn a payment window so the customer can complete the transaction in a secured environment.",
+                        "params": {
+                            "line-items": {
+								"name": "Line Items",
+								"desc": "A JSON array of price Ids and quantities to be purchased. Ex: [{\"price_id\": \"PRICE_1234\", \"quantity\": 2}]"
+							},
+                            "automatic-tax": {
+								"name": "Automatic Tax",
+								"desc": "Collects tax automatically if set using the business address and tax registrations required to perform the tax calculation associated with the account."
+							}
+						}
+					}
+				},
+				"expressions": {
+                    "get-account-id": {
+						"description": "Get the Zalance user's account Id.",
+						"translated-name": "Get Account Id",
+						"params": {}
+					},
+                    "get-last-prices": {
+						"description": "Get the JSON array of last fetched prices.",
+						"translated-name": "Get Last Prices",
+						"params": {}
+					},
+                    "get-next-price-page": {
+						"description": "Get the next page number of prices to fetch.",
+						"translated-name": "Get Next Price Page",
+						"params": {}
+					},
+                    "get-current-price-page": {
+						"description": "Get the current page number of prices.",
+						"translated-name": "Get Last Price Page",
+						"params": {}
+					},
+                    "get-last-error": {
+                        "description": "Get the most recent error message.",
+                        "translated-name": "Get Last Error",
+						"params": {}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "Zalance API",
+	"id": "ZalanceAPI",
+	"version": "1.0.0.0",
+	"author": "Zalance Inc.",
+	"website": "https://zalance.net",
+	"documentation": "https://docs.zalance.net/",
+	"description": "Zalance API addon for payments, in-app purchases, and stores.",
+	"editor-scripts": [
+        "plugin.js",
+        "type.js",
+        "instance.js"
+    ],
+	"file-list": [
+        "c3runtime/actions.js",
+        "c3runtime/authManager.js",
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"c3runtime/instance.js",
+        "c3runtime/domSide.js",
+		"c3runtime/conditions.js",
+		"c3runtime/expressions.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"plugin.js",
+		"type.js",
+		"instance.js"
+	]
+}

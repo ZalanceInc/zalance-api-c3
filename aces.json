@@ -1,0 +1,105 @@
+﻿{
+	"products": {
+		"conditions": [
+            {
+				"id": "on-prices-received",
+				"scriptName": "OnPricesReceived",
+                "isTrigger": true
+			},
+            {
+				"id": "on-buy-click",
+				"scriptName": "OnBuyClick",
+				"isTrigger": true
+			},
+            {
+				"id": "on-checkout-start",
+				"scriptName": "OnCheckoutStart",
+                "isTrigger": true
+			},
+            {
+				"id": "on-checkout-finish",
+				"scriptName": "OnCheckoutFinish",
+                "isTrigger": true
+			},
+            {
+				"id": "on-error",
+				"scriptName": "OnError",
+				"isTrigger": true
+			}
+		],
+		"actions": [
+            {
+				"id": "set-account-id",
+				"scriptName": "SetAccountId",
+				"params": [{	"id": "accountId",	"type": "string"	}]
+			},
+            {
+				"id": "get-prices",
+				"scriptName": "GetPrices",
+				"params": [
+                    { "id": "count", "type": "number" },
+                    { "id": "page", "type": "number" }
+                ]
+			},
+            {
+				"id": "start-checkout",
+				"scriptName": "StartCheckout",
+				"params": [
+                    { "id": "price-id", "type": "string" },
+                    { "id": "quantity", "type": "number" },
+                    { "id": "automatic-tax", "type": "boolean" }
+                ]
+			},
+            {
+				"id": "start-checkout-cart",
+				"scriptName": "StartCheckoutCart",
+				"params": [
+                    { "id": "line-items", "type": "string" },
+                    { "id": "automatic-tax", "type": "boolean" }
+                ]
+			}
+		],
+		"expressions": [
+            {
+				"id": "get-account-id",
+				"expressionName": "GetAccountId",
+				"scriptName": "GetAccountId",
+				"highlight": true,
+				"returnType": "string",
+				"params": []
+			},
+            {
+				"id": "get-last-prices",
+				"expressionName": "GetLastPrices",
+				"scriptName": "GetLastPrices",
+				"highlight": true,
+				"returnType": "string",
+				"params": []
+			},
+            {
+				"id": "get-next-price-page",
+				"expressionName": "GetNextPricePage",
+				"scriptName": "GetNextPricePage",
+				"highlight": true,
+				"returnType": "number",
+				"params": []
+			},
+            {
+				"id": "get-current-price-page",
+				"expressionName": "GetCurrentPricePage",
+				"scriptName": "GetCurrentPricePage",
+				"highlight": true,
+				"returnType": "number",
+				"params": []
+			},
+            {
+				"id": "get-last-error",
+				"expressionName": "GetLastError",
+                "scriptName": "GetLastError",
+                "highlight": false,
+                "returnType": "string",
+				"params": []
+			}
+		]
+	}
+}
