@@ -3,7 +3,7 @@ const C3 = self.C3;
 
 // NOTE: use a unique DOM component ID to ensure it doesn't clash with anything else.
 const DOM_COMPONENT_ID = "ZalanceAPI";
-const API_PUBLIC_DOMAIN = 'https://x8ki-letl-twmt.n7.xano.io/api:Kp9D5gmw';
+const API_PUBLIC_DOMAIN = 'https://api.zalance.net/api:Kp9D5gmw';
 const API_WS_DOMAIN = 'wss://realtime.ably.io?key=uXZHPA.morNBQ:spIwqa7KLhYxhwvbZmG_KHYiG5dCHZQ33Z-ue2ToQwI';
 const API_PRICES_GET = API_PUBLIC_DOMAIN + '/price/{project_uuid}';
 const API_SESSION_CREATE = API_PUBLIC_DOMAIN + '/session';

@@ -1,4 +1,4 @@
-# PlayFab for Construct 3
+# Zalance API for Construct 3
 ## _A free addon for Construct 3 to interact with the Zalance API_
 
 [![Zalance](https://d3swsyk9jwm5ry.cloudfront.net/images/logo-diamond-black-441x84.png)](https://zalance.net/downloads/)
