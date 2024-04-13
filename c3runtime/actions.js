@@ -1,4 +1,3 @@
-
 self.C3.Plugins.ZalanceAPI.Acts =
 {
     SetAccountId(id)
